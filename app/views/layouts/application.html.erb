@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <div class='row'>
+      <header class="header">
+        <h1 class="main-header">Cardat</h1>
+        <ul class="header-subnav">
+          <li><a href="http://localhost:3000">Home</a></li>
+          <li><a href="http://localhost:3000/cars/" class="is-active">Cars</a></li>
+          <li><a target="_blank" href="http://zurb.com/responsive">Just do it!</a></li>
+        </ul>
+      </header>
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+<a href="#" class="icon-button facebook">
+  <i class="fi-social-facebook"></i><span></span>
+</a>
+<a href="#" class="icon-button twitter">
+	<i class="fi-social-twitter"></i><span></span> </a>
+	<a href="#" class="icon-button gplus">
+  <i class="fi-social-google-plus"></i><span></span>
+</a>
+    <%= yield %>
+    <footer class="footer">
+      <div class="row">
+        <div class="small-12 medium-6 medium-push-6 columns">
+          <p class="logo show-for-small-only"><i class="fi-target"></i> CarDat</p>
+          <form class="footer-form">
+            <div class="row">
+              <div class="medium-9 medium-push-3 columns">
+                <label>
+                  <label for="email" class="contact">Contact Us</label>
+                  <input type="email" id="email" placeholder="Email Address" />
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="medium-9 medium-push-3 columns">
+                <label>
+                  <textarea rows="5" id="message" placeholder="Message"></textarea>
+                </label>
+              </div>
+              <div class="row">
+                <div class="medium-9 medium-push-3 columns">
+                  <button class="submit" type="submit" value="Submit">Send</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="small-12 medium-6 medium-pull-6 columns">
+          <p class="logo hide-for-small-only"><i class="fi-target"></i> FIGHT CLUB</p>
+          <p class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#">Faq</a>
+            <a href="#">Contact</a>
+          </p>
+          <ul class="inline-list social">
+            <a href="#"><i class="fi-social-facebook"></i></a>
+            <a href="#"><i class="fi-social-twitter"></i></a>
+            <a href="#"><i class="fi-social-linkedin"></i></a>
+            <a href="#"><i class="fi-social-github"></i></a>
+          </ul>
+          <p class="copywrite">We Always Got Dat © 2015</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
